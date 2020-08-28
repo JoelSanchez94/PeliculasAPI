@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using PeliculasAPI.DTOs;
+using PeliculasAPI.DTOs.Actor;
+using PeliculasAPI.DTOs.Autor;
 using PeliculasAPI.Entidades;
 using System;
 using System.Collections.Generic;
@@ -12,8 +14,14 @@ namespace PeliculasAPI.Helpers
 	{
 		public AutoMapperProfiles()
 		{
+			//Mapear tabla Genero
 			CreateMap<Genero, GeneroDTO>().ReverseMap();
 			CreateMap<GeneroCreacionDTO, Genero>();
+
+
+			//Mapear tabla Actor
+			CreateMap<Actor, ActorDTO>().ReverseMap();
+			CreateMap<ActorCreacionDTO, Actor>();
 		}
 	}
 }
